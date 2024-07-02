@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="body-wrapper">
+      <div class="amount-options">
+        <span>Choose an amount</span>
+        <div class="amount-btns">
+          <button onclick="inputAmount(this)" value="200">
+            <span>₦200</span>
+          </button>
+          <button onclick="inputAmount(this)" value="300">
+            <span>₦300</span>
+          </button>
+          <button onclick="inputAmount(this)" value="500">
+            <span>₦500</span>
+          </button>
+          <button onclick="inputAmount(this)" value="1000">
+            <span>₦1000</span>
+          </button>
+          <button onclick="inputAmount(this)" value="2000">
+            <span>₦2000</span>
+          </button>
+          <button onclick="inputAmount(this)" value="3000">
+            <span>₦3000</span>
+          </button>
+        </div>
+      </div>
+      <select name="" id="provider">
+        <option value="">Choose network provider</option>
+        <option value="MTN">mtn</option>
+        <option value="Glo">glo</option>
+        <option value="9mobile">9mobile</option>
+        <option value="Airtel">airtel</option>
+      </select>
+      <div class="amount">
+        <span>Amount</span>
+        <input id="amount" placeholder="₦0.00" type="text" />
+      </div>
+      <div class="generatespinner">
+        <button class="purple" onclick="generate()">
+          Generate voucher digit
+        </button>
+      </div>
+
+      <span>Digit: <span id="ourPin"> </span></span>
+
+      <input id="voucherInput" type="text" />
+      <button class="purple" onclick="load()">Load</button>
+      <div class="success-message" id="successMessage">
+        <h3 id="providerHeader"></h3>
+        <span
+          >Your <span id="amountRecharged"></span> recharge was
+          successful!!!</span
+        >
+        <span>Your balance is <span id="balance"></span></span>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
