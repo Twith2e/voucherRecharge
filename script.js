@@ -33,6 +33,9 @@ function load() {
         isProivder = true;
       }
     });
+  } else {
+    alert("Check your pin again");
+    return;
   }
   if (isProivder) {
     if (usedVoucher.includes(ourPin.innerText)) {
